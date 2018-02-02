@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 
-public class MainActivity extends Activity implements CheeseListFragment.OnFragmentInteractionListener {
+public class MainActivity extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,14 +33,5 @@ public class MainActivity extends Activity implements CheeseListFragment.OnFragm
         }
 
         return super.onOptionsItemSelected(item);
-    }
-
-    @Override
-    public void onFragmentInteraction(String id) {
-        AlertDialog alertDialog = new AlertDialog.Builder(MainActivity.this).create();
-        alertDialog.setTitle("Product Id");
-        alertDialog.setMessage(id);
-        alertDialog.setCancelable(true);
-        alertDialog.show();
     }
 }
